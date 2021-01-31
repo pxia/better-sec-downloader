@@ -42,7 +42,7 @@ def url_rewrite(fromfname, tofname):
             except:
                 pass
         dest.body.replace_with(source.findAll("body")[0])
-        with open(tofname, "w") as f:
+        with open(tofname, "w+") as f:
             f.write(str(dest))
 
 
