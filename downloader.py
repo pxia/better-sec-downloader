@@ -23,9 +23,7 @@ def find_filename(path, ticker, form, date):
         return ret
 
     for i in range(10):
-        ret = os.path.join(
-            path, os.path.join(path, "%s_%s_%s_%d.html" % (ticker, form, date, i))
-        )
+        ret = os.path.join(path, "%s_%s_%s_%d.html" % (ticker, form, date, i))
         if not os.path.isfile(ret):
             return ret
 
